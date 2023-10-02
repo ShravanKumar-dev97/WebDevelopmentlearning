@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+   --primary:#f96d00;
+   --secondary: #393e46;
+   --third-color:#222831;
+   --white:#f2f2f2;
+
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body{
+   height: 100vh;
+   background-color: var(--third-color);
+   display: grid;
+   place-items: center;
+}
+
+.main-box label{
+   position: relative;
+   background-color: var(--primary);
+   width: 150px;
+   height: 50px;
+   display: block;
+   border-radius: 35px;
+   display: block;
+   text-align: center;
+   line-height: 50px;
+   color: var(--white);
+   font-size: 22px;
+   font-weight: 500;
+   text-transform: uppercase;
+   cursor: pointer;
+   box-shadow:  0 0 4px rgba(0,0,0,0.5);
+   transition: all 0.3s ease;
+}
+
+
+.main-box label:before{
+   content: "Cancel";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   background-color: var(--primary);
+   border-radius: 35px;
+   opacity: 0;
+   pointer-events: none;
+}
+
+.main-box label:hover{
+   letter-spacing: 0.1rem;
+}
+
+#check{
+   display: none;
+}
+
+#check:checked ~ label:before{
+   opacity: 1;
+   pointer-events: auto;
+}
