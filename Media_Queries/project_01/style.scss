@@ -1,0 +1,71 @@
+$color-1 : #A40E4C; //desktop
+$color-2 : #2C2C54; //laptop
+$color-3: #ACC3A6; //tablet
+$color-4: #36C9C6; //mobile
+
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+body{
+   height: 100vh;
+   display: grid;
+   place-items: center;
+   background: $color-1;
+   font-size: 2rem;
+}
+
+.container{
+   color: #fff;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.text::before{
+content: "Desktop";
+}
+
+@media (max-width: $desktop){ 
+   body{
+      background-color: $color-1;
+   }
+   .text::before{
+      content: "Desktop";
+      }
+}
+
+@media (max-width: $laptop){ 
+   body{
+      font-size: 1.8rem;
+      background-color: $color-2;
+   }
+   .text::before{
+      content: "Laptop";
+      }
+}
+
+@media (max-width: $tablet){ 
+   body{
+      font-size: 1.6rem;
+      background-color: $color-3;
+   }
+   .text::before{
+      content: "Tablet";
+      }
+}
+
+@media (max-width: $mobile){ 
+   body{
+      font-size: 1.4rem;
+      background-color: $color-4;
+   }
+   .text::before{
+      content: "Mobile";
+      }
+}
+

@@ -1,0 +1,128 @@
+$color-1 : #A40E4C; //desktop
+$color-2 : #2C2C54; //laptop
+$color-3: #ACC3A6; //tablet
+$color-4: #36C9C6; //mobile
+
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+*{
+   margin: 0px 5px;
+   padding: 0px;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+.header{
+   // border: 1px solid red;
+   height: 10%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+
+   
+   &_menu{
+      display: flex;
+      flex-direction: row;
+      font-size: 2.25vw;
+      gap: 1vw;
+   }
+
+   &_logo{
+      font-size: 4vw;
+   }
+}
+
+.main{
+   height: 79%;
+   // border: 1px solid blue;
+   display: flex;
+   flex-direction: row;
+   margin-top: 1%;
+
+
+   &_image{
+      width: 50%;
+      background-image: url(profile.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      // border: 2px solid rgb(30, 0, 255);
+
+   }
+
+   &_text{
+      width: 50%;
+      // border: 1px solid greenyellow;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &-1{
+         font-size: 10vw;
+      }
+
+      &-2,&-3{
+         color: rgb(98, 98, 98);
+         font-size: 5vw;
+      }
+   }
+
+  
+}
+
+.footer{
+   height: 10%;
+   // border: 1px solid green;
+   display: flex;
+   justify-content: center;
+   margin-left: 50%;
+   align-items: center;
+   gap: 1rem;
+   font-size: 2.5rem;
+}
+
+@media  (max-width: 650px) {
+   .header{
+      justify-content: center;
+      &_logo{
+         font-size: 2rem;
+      }
+      &_menu{
+         display: none;
+      }
+   }
+
+   .main{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &_image{
+         width: 15rem;
+         height: 15rem;
+      }
+
+      &_text{
+         margin-top: 15px;
+         width: 60%;
+         &-1{
+            font-size: 2.5rem;
+         }
+         &-2,&-3{
+            font-size: 1.2rem;
+         }
+      }
+   }
+
+   .footer{
+      margin-left: 0;
+      font-size: 2rem;
+   }
+   
+}
